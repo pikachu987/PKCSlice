@@ -1,0 +1,16 @@
+PODS:
+  - PKCSlice (0.1.0)
+
+DEPENDENCIES:
+  - PKCSlice (from `../`)
+
+EXTERNAL SOURCES:
+  PKCSlice:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PKCSlice: 3b81bacae7dc99f7281507853a15a16634af45bf
+
+PODFILE CHECKSUM: 73f8b38f09320d7f516396fcfac96ff7d4ede371
+
+COCOAPODS: 1.1.1

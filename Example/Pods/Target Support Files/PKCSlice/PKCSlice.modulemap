@@ -1,0 +1,6 @@
+framework module PKCSlice {
+  umbrella header "PKCSlice-umbrella.h"
+
+  export *
+  module * { export * }
+}

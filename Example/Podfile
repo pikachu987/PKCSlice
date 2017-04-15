@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PKCSlice_Example' do
+  pod 'PKCSlice', :path => '../'
+
+  target 'PKCSlice_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

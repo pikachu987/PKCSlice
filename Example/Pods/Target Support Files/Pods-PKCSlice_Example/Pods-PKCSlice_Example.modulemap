@@ -1,0 +1,6 @@
+framework module Pods_PKCSlice_Example {
+  umbrella header "Pods-PKCSlice_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

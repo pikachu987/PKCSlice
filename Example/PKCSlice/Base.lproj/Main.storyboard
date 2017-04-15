@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="j8S-fZ-13i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Default-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PKCSlice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJT-ZM-YxB" customClass="PKCSlice" customModule="PKCSlice">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-yf-1wQ" customClass="PKCSliceView" customModule="PKCSlice">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-F0-5Ls">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3v5-F0-5Ls" secondAttribute="trailing" id="1iM-OE-hYa"/>
+                                            <constraint firstItem="3v5-F0-5Ls" firstAttribute="leading" secondItem="IUN-yf-1wQ" secondAttribute="leading" id="4sp-1c-pzP"/>
+                                            <constraint firstAttribute="bottom" secondItem="3v5-F0-5Ls" secondAttribute="bottom" id="Ti7-Hd-2lX"/>
+                                            <constraint firstItem="3v5-F0-5Ls" firstAttribute="top" secondItem="IUN-yf-1wQ" secondAttribute="top" id="Vsv-oA-Es2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlV-od-12v" customClass="PKCSliceView" customModule="PKCSlice">
+                                        <rect key="frame" x="0.0" y="128.5" width="375" height="188"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-UJ-p2M">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LW7-UJ-p2M" secondAttribute="bottom" id="65i-av-8dG"/>
+                                            <constraint firstItem="LW7-UJ-p2M" firstAttribute="top" secondItem="VlV-od-12v" secondAttribute="top" id="M4L-Xj-phE"/>
+                                            <constraint firstAttribute="trailing" secondItem="LW7-UJ-p2M" secondAttribute="trailing" id="SOy-c0-3SI"/>
+                                            <constraint firstItem="LW7-UJ-p2M" firstAttribute="leading" secondItem="VlV-od-12v" secondAttribute="leading" id="mK1-NJ-RrU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-z9-JJB" customClass="PKCSliceView" customModule="PKCSlice">
+                                        <rect key="frame" x="0.0" y="256.5" width="375" height="188.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.png" translatesAutoresizingMaskIntoConstraints="NO" id="fml-BT-g69">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fml-BT-g69" firstAttribute="leading" secondItem="a7Z-z9-JJB" secondAttribute="leading" id="LdM-fQ-cxY"/>
+                                            <constraint firstAttribute="trailing" secondItem="fml-BT-g69" secondAttribute="trailing" id="Sxt-P4-xj8"/>
+                                            <constraint firstItem="fml-BT-g69" firstAttribute="top" secondItem="a7Z-z9-JJB" secondAttribute="top" id="dqJ-ND-751"/>
+                                            <constraint firstAttribute="bottom" secondItem="fml-BT-g69" secondAttribute="bottom" id="pb1-kW-3Gs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4A-iz-ZIC" customClass="PKCSliceView" customModule="PKCSlice">
+                                        <rect key="frame" x="0.0" y="415" width="375" height="188"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-ku-D4H">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Dpb-ku-D4H" firstAttribute="leading" secondItem="m4A-iz-ZIC" secondAttribute="leading" id="8Le-BY-Cf9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dpb-ku-D4H" secondAttribute="trailing" id="EcA-yd-EDv"/>
+                                            <constraint firstItem="Dpb-ku-D4H" firstAttribute="top" secondItem="m4A-iz-ZIC" secondAttribute="top" id="L5K-6j-fsh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dpb-ku-D4H" secondAttribute="bottom" id="Lyr-k2-54m"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="a7Z-z9-JJB" firstAttribute="height" secondItem="IUN-yf-1wQ" secondAttribute="height" id="1at-Wu-WMp"/>
+                                    <constraint firstItem="a7Z-z9-JJB" firstAttribute="top" secondItem="VlV-od-12v" secondAttribute="bottom" constant="-60" id="4bR-Hs-RSI"/>
+                                    <constraint firstAttribute="trailing" secondItem="VlV-od-12v" secondAttribute="trailing" id="9r6-6j-ghY"/>
+                                    <constraint firstAttribute="bottom" secondItem="m4A-iz-ZIC" secondAttribute="bottom" id="AzO-rr-oVB"/>
+                                    <constraint firstItem="m4A-iz-ZIC" firstAttribute="height" secondItem="fml-BT-g69" secondAttribute="height" id="H9o-kz-aCk"/>
+                                    <constraint firstAttribute="trailing" secondItem="m4A-iz-ZIC" secondAttribute="trailing" id="Qnx-10-Zfl"/>
+                                    <constraint firstItem="m4A-iz-ZIC" firstAttribute="leading" secondItem="qJT-ZM-YxB" secondAttribute="leading" id="Va6-Ts-gTt"/>
+                                    <constraint firstItem="m4A-iz-ZIC" firstAttribute="top" secondItem="a7Z-z9-JJB" secondAttribute="bottom" constant="-30" id="X0q-K1-aEi"/>
+                                    <constraint firstAttribute="trailing" secondItem="a7Z-z9-JJB" secondAttribute="trailing" id="XwV-tU-eSA"/>
+                                    <constraint firstItem="VlV-od-12v" firstAttribute="height" secondItem="IUN-yf-1wQ" secondAttribute="height" id="YMa-eD-M0V"/>
+                                    <constraint firstItem="IUN-yf-1wQ" firstAttribute="top" secondItem="qJT-ZM-YxB" secondAttribute="top" id="bbe-Wh-auq"/>
+                                    <constraint firstAttribute="trailing" secondItem="IUN-yf-1wQ" secondAttribute="trailing" id="dEu-TG-f0d"/>
+                                    <constraint firstItem="VlV-od-12v" firstAttribute="top" secondItem="IUN-yf-1wQ" secondAttribute="bottom" constant="-60" id="ecl-Np-1Op"/>
+                                    <constraint firstItem="IUN-yf-1wQ" firstAttribute="leading" secondItem="qJT-ZM-YxB" secondAttribute="leading" id="gC9-ql-JgS"/>
+                                    <constraint firstItem="a7Z-z9-JJB" firstAttribute="leading" secondItem="qJT-ZM-YxB" secondAttribute="leading" id="tAM-fc-CLc"/>
+                                    <constraint firstItem="VlV-od-12v" firstAttribute="leading" secondItem="qJT-ZM-YxB" secondAttribute="leading" id="v88-gg-HIi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qJT-ZM-YxB" secondAttribute="trailing" id="dR6-t8-RYn"/>
+                            <constraint firstItem="qJT-ZM-YxB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="faZ-sf-bf8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qJT-ZM-YxB" secondAttribute="bottom" id="g1g-kd-XG0"/>
+                            <constraint firstItem="qJT-ZM-YxB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pEA-uU-YpT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Default" id="xmt-GJ-KgV"/>
+                    <connections>
+                        <outlet property="sliceView" destination="qJT-ZM-YxB" id="Vjh-hL-Zpc"/>
+                        <segue destination="y7d-3k-emO" kind="show" identifier="StoryboardTypeController" id="V6A-DK-LKP"/>
+                        <segue destination="2gW-oq-zch" kind="show" identifier="SliceImagesViewController" id="gu3-b5-Zww"/>
+                        <segue destination="VX4-e8-svE" kind="show" identifier="SliceColorsViewController" id="JQI-Me-XoU"/>
+                        <segue destination="oTn-gf-rkz" kind="show" identifier="SliceViewsViewController" id="czo-ac-SAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.79999999999995" y="-646.32683658170924"/>
+        </scene>
+        <!--Slice Images View Controller-->
+        <scene sceneID="g80-0q-SLk">
+            <objects>
+                <viewController id="2gW-oq-zch" customClass="SliceImagesViewController" customModule="PKCSlice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n27-YH-fA5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pu6-4h-Bej"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Crr-kv-Fbd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dW-16-uHj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6dW-16-uHj" firstAttribute="top" secondItem="n27-YH-fA5" secondAttribute="bottom" id="9Rs-oR-Er0"/>
+                            <constraint firstItem="Pu6-4h-Bej" firstAttribute="top" secondItem="6dW-16-uHj" secondAttribute="bottom" id="ABz-fr-YCD"/>
+                            <constraint firstAttribute="trailing" secondItem="6dW-16-uHj" secondAttribute="trailing" id="WbK-i8-6G1"/>
+                            <constraint firstItem="6dW-16-uHj" firstAttribute="leading" secondItem="Crr-kv-Fbd" secondAttribute="leading" id="hpm-71-SJO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="superView" destination="6dW-16-uHj" id="s82-zZ-pjO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0a-gv-v5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="152"/>
+        </scene>
+        <!--Slice Colors View Controller-->
+        <scene sceneID="rdz-wT-Bej">
+            <objects>
+                <viewController id="VX4-e8-svE" customClass="SliceColorsViewController" customModule="PKCSlice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1AN-Q4-AAW"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4g-kP-uNv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNh-gd-boa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NF-dH-hji">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5NF-dH-hji" firstAttribute="top" secondItem="1AN-Q4-AAW" secondAttribute="bottom" id="0KT-6k-2MO"/>
+                            <constraint firstItem="5NF-dH-hji" firstAttribute="leading" secondItem="eNh-gd-boa" secondAttribute="leading" id="633-Be-EDA"/>
+                            <constraint firstAttribute="bottom" secondItem="5NF-dH-hji" secondAttribute="bottom" id="ZJz-VX-OAk"/>
+                            <constraint firstAttribute="trailing" secondItem="5NF-dH-hji" secondAttribute="trailing" id="bb3-Tm-AcT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="superView" destination="5NF-dH-hji" id="p8S-xc-yZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJb-PP-90w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="152"/>
+        </scene>
+        <!--Slice Views View Controller-->
+        <scene sceneID="aUd-bg-RYp">
+            <objects>
+                <viewController id="oTn-gf-rkz" customClass="SliceViewsViewController" customModule="PKCSlice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxC-7R-qAa"/>
+                        <viewControllerLayoutGuide type="bottom" id="PqK-4R-4Ua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cdh-1b-TLp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-AK-H5d">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="R9Q-AK-H5d" secondAttribute="trailing" id="PFT-vo-1Sx"/>
+                            <constraint firstItem="R9Q-AK-H5d" firstAttribute="top" secondItem="fxC-7R-qAa" secondAttribute="bottom" id="jvg-h8-rv9"/>
+                            <constraint firstItem="R9Q-AK-H5d" firstAttribute="leading" secondItem="cdh-1b-TLp" secondAttribute="leading" id="lo9-yW-aFy"/>
+                            <constraint firstAttribute="bottom" secondItem="R9Q-AK-H5d" secondAttribute="bottom" id="t3n-Ya-BOz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="superView" destination="R9Q-AK-H5d" id="IAN-Ke-Pd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kx-QA-bEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="152"/>
+        </scene>
+        <!--Storyboard Type Controller-->
+        <scene sceneID="1FG-yh-SFW">
+            <objects>
+                <viewController id="y7d-3k-emO" customClass="StoryboardTypeController" customModule="PKCSlice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3g-Cm-uu1"/>
+                        <viewControllerLayoutGuide type="bottom" id="rUV-Ep-uOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYM-Sx-wFE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ym7-eC-bAA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9K-Tp-sXi" customClass="PKCSlice" customModule="PKCSlice">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEd-Bw-cYr" customClass="PKCSliceView" customModule="PKCSlice">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-zC-0vc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="0RD-zC-0vc" secondAttribute="bottom" id="7Ba-pw-xG7"/>
+                                                    <constraint firstItem="0RD-zC-0vc" firstAttribute="top" secondItem="QEd-Bw-cYr" secondAttribute="top" id="JTN-BI-UjM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0RD-zC-0vc" secondAttribute="trailing" id="Z7y-Gn-9FE"/>
+                                                    <constraint firstItem="0RD-zC-0vc" firstAttribute="leading" secondItem="QEd-Bw-cYr" secondAttribute="leading" id="gQa-Cq-yWv"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-Yp-iuN" customClass="PKCSliceView" customModule="PKCSlice">
+                                                <rect key="frame" x="0.0" y="224.5" width="375" height="234"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-5W-4mG">
+                                                        <rect key="frame" x="0.0" y="10" width="375" height="134"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <mutableString key="text">Copyright (c) 2017 pikachu987 &lt;pikachu77769@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="TUA-5W-4mG" secondAttribute="trailing" id="15g-9Y-yTB"/>
+                                                    <constraint firstItem="TUA-5W-4mG" firstAttribute="top" secondItem="ayN-Yp-iuN" secondAttribute="top" constant="10" id="JYq-ja-SoP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TUA-5W-4mG" secondAttribute="bottom" constant="90" id="Nbt-qJ-K3w"/>
+                                                    <constraint firstItem="TUA-5W-4mG" firstAttribute="leading" secondItem="ayN-Yp-iuN" secondAttribute="leading" id="VwX-t8-R5C"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6h-6c-tJl" customClass="PKCSliceView" customModule="PKCSlice">
+                                                <rect key="frame" x="0.0" y="368.5" width="375" height="234.5"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="J6h-6c-tJl" secondAttribute="trailing" id="4Xp-6v-TTL"/>
+                                            <constraint firstItem="QEd-Bw-cYr" firstAttribute="leading" secondItem="h9K-Tp-sXi" secondAttribute="leading" id="6X3-bo-69m"/>
+                                            <constraint firstItem="J6h-6c-tJl" firstAttribute="height" secondItem="QEd-Bw-cYr" secondAttribute="height" id="ESE-k5-jFm"/>
+                                            <constraint firstItem="QEd-Bw-cYr" firstAttribute="top" secondItem="h9K-Tp-sXi" secondAttribute="top" id="II8-b0-T7A"/>
+                                            <constraint firstItem="ayN-Yp-iuN" firstAttribute="leading" secondItem="h9K-Tp-sXi" secondAttribute="leading" id="JVN-vC-YUX"/>
+                                            <constraint firstItem="J6h-6c-tJl" firstAttribute="top" secondItem="ayN-Yp-iuN" secondAttribute="bottom" constant="-90" id="MpI-em-g30"/>
+                                            <constraint firstItem="ayN-Yp-iuN" firstAttribute="height" secondItem="QEd-Bw-cYr" secondAttribute="height" id="P54-tF-Hb8"/>
+                                            <constraint firstItem="J6h-6c-tJl" firstAttribute="leading" secondItem="h9K-Tp-sXi" secondAttribute="leading" id="RAQ-Md-3AN"/>
+                                            <constraint firstAttribute="trailing" secondItem="ayN-Yp-iuN" secondAttribute="trailing" id="Zbv-7b-LGj"/>
+                                            <constraint firstItem="ayN-Yp-iuN" firstAttribute="top" secondItem="QEd-Bw-cYr" secondAttribute="bottom" constant="-10" id="hLM-eL-qm0"/>
+                                            <constraint firstAttribute="trailing" secondItem="QEd-Bw-cYr" secondAttribute="trailing" id="kFs-be-rDr"/>
+                                            <constraint firstAttribute="bottom" secondItem="J6h-6c-tJl" secondAttribute="bottom" id="yG5-bF-8iM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="h9K-Tp-sXi" secondAttribute="bottom" id="E88-uz-YJH"/>
+                                    <constraint firstAttribute="trailing" secondItem="h9K-Tp-sXi" secondAttribute="trailing" id="n1E-ni-f2c"/>
+                                    <constraint firstItem="h9K-Tp-sXi" firstAttribute="top" secondItem="Ym7-eC-bAA" secondAttribute="top" id="r85-2d-T0G"/>
+                                    <constraint firstItem="h9K-Tp-sXi" firstAttribute="leading" secondItem="Ym7-eC-bAA" secondAttribute="leading" id="uF9-Tf-iQw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ym7-eC-bAA" firstAttribute="top" secondItem="y3g-Cm-uu1" secondAttribute="bottom" id="7ZL-Ho-2Gh"/>
+                            <constraint firstAttribute="trailing" secondItem="Ym7-eC-bAA" secondAttribute="trailing" id="D6e-By-d5t"/>
+                            <constraint firstItem="rUV-Ep-uOt" firstAttribute="top" secondItem="Ym7-eC-bAA" secondAttribute="bottom" id="VJ4-gY-ydj"/>
+                            <constraint firstItem="Ym7-eC-bAA" firstAttribute="leading" secondItem="aYM-Sx-wFE" secondAttribute="leading" id="djm-EI-PQr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliceView" destination="h9K-Tp-sXi" id="Cnk-gp-auF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gC2-Vj-Luw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="-646"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qlQ-oa-PvJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j8S-fZ-13i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qrz-by-z0R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ya9-Ln-AP6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKQ-Fv-hVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="-646.32683658170924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.png" width="840" height="566"/>
+        <image name="2.png" width="790" height="568"/>
+        <image name="3.png" width="862" height="646"/>
+        <image name="4.png" width="826" height="600"/>
+    </resources>
+</document>
