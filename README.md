@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 #### use storyboard
 
-![image](./1.png)
+![image](./1_1.png)
 
 ![image](./2.png)
 
