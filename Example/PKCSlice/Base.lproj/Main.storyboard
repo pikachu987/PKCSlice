@@ -25,10 +25,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-yf-1wQ" customClass="PKCSliceView" customModule="PKCSlice">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-F0-5Ls">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,10 +40,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlV-od-12v" customClass="PKCSliceView" customModule="PKCSlice">
-                                        <rect key="frame" x="0.0" y="128.5" width="375" height="188"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="195.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-UJ-p2M">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="195.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,10 +55,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-z9-JJB" customClass="PKCSliceView" customModule="PKCSlice">
-                                        <rect key="frame" x="0.0" y="256.5" width="375" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="271.5" width="375" height="196"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.png" translatesAutoresizingMaskIntoConstraints="NO" id="fml-BT-g69">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,10 +70,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4A-iz-ZIC" customClass="PKCSliceView" customModule="PKCSlice">
-                                        <rect key="frame" x="0.0" y="415" width="375" height="188"/>
+                                        <rect key="frame" x="0.0" y="407.5" width="375" height="195.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-ku-D4H">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="195.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,7 +94,7 @@
                                     <constraint firstItem="m4A-iz-ZIC" firstAttribute="height" secondItem="fml-BT-g69" secondAttribute="height" id="H9o-kz-aCk"/>
                                     <constraint firstAttribute="trailing" secondItem="m4A-iz-ZIC" secondAttribute="trailing" id="Qnx-10-Zfl"/>
                                     <constraint firstItem="m4A-iz-ZIC" firstAttribute="leading" secondItem="qJT-ZM-YxB" secondAttribute="leading" id="Va6-Ts-gTt"/>
-                                    <constraint firstItem="m4A-iz-ZIC" firstAttribute="top" secondItem="a7Z-z9-JJB" secondAttribute="bottom" constant="-30" id="X0q-K1-aEi"/>
+                                    <constraint firstItem="m4A-iz-ZIC" firstAttribute="top" secondItem="a7Z-z9-JJB" secondAttribute="bottom" constant="-60" id="X0q-K1-aEi"/>
                                     <constraint firstAttribute="trailing" secondItem="a7Z-z9-JJB" secondAttribute="trailing" id="XwV-tU-eSA"/>
                                     <constraint firstItem="VlV-od-12v" firstAttribute="height" secondItem="IUN-yf-1wQ" secondAttribute="height" id="YMa-eD-M0V"/>
                                     <constraint firstItem="IUN-yf-1wQ" firstAttribute="top" secondItem="qJT-ZM-YxB" secondAttribute="top" id="bbe-Wh-auq"/>
@@ -265,7 +265,7 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-5W-4mG">
                                                         <rect key="frame" x="0.0" y="10" width="375" height="134"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <mutableString key="text">Copyright (c) 2017 pikachu987 &lt;pikachu77769@gmail.com&gt;
+                                                        <string key="text">Copyright (c) 2017 pikachu987 &lt;pikachu77769@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -284,7 +284,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-</mutableString>
+</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
