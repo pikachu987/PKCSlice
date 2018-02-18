@@ -190,7 +190,7 @@ class ViewController: UIViewController{
 extension ViewController: SliceViewDelegate{
 
     // sliceView Touch
-    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView?, index: Int) {
+    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView, index: Int) {
     
     }
     

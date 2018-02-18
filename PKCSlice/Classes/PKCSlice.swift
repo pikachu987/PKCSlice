@@ -23,7 +23,7 @@ import UIKit
 
 public protocol SliceDelegate: class {
     /// sliceView Touch
-    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView?, index: Int)
+    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView, index: Int)
     /// sliceTopView Touch
     func sliceTopTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView)
     /// sliceBottomView Touch
@@ -31,7 +31,7 @@ public protocol SliceDelegate: class {
 }
 
 public extension SliceDelegate {
-    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView?, index: Int){ }
+    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView, index: Int){ }
     func sliceTopTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView){ }
     func sliceBottomTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView){ }
 }

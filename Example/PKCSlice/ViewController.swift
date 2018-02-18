@@ -218,8 +218,7 @@ extension ViewController: SliceDelegate{
     
     
     
-    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView?, index: Int) {
-        guard let sliceView = sliceView else { return }
+    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView, index: Int) {
         let alertController = UIAlertController(title: "sliceView index: \(index)", message: "\(sliceView)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
