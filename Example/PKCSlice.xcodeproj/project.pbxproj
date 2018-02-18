@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7A88F820390B92003EEA84 /* temp.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A88F720390B92003EEA84 /* temp.png */; };
+		0C7A88FC20391354003EEA84 /* CustomSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A88FB20391354003EEA84 /* CustomSliceView.swift */; };
+		0C7A88FE2039137A003EEA84 /* CustomSliceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A88FD2039137A003EEA84 /* CustomSliceView.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,10 +21,6 @@
 		6E4CE1B41EA26EA100D45282 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4CE1B11EA26EA100D45282 /* 2.png */; };
 		6E4CE1B51EA26EA100D45282 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4CE1B21EA26EA100D45282 /* 3.png */; };
 		6E4CE1B71EA2732C00D45282 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4CE1B61EA2732C00D45282 /* 4.png */; };
-		6E4CE1B91EA274EF00D45282 /* StoryboardTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CE1B81EA274EF00D45282 /* StoryboardTypeController.swift */; };
-		6E4CE1BB1EA2794600D45282 /* SliceImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CE1BA1EA2794500D45282 /* SliceImagesViewController.swift */; };
-		6E4CE1BD1EA279A200D45282 /* SliceColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CE1BC1EA279A200D45282 /* SliceColorsViewController.swift */; };
-		6E4CE1BF1EA279B900D45282 /* SliceViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4CE1BE1EA279B900D45282 /* SliceViewsViewController.swift */; };
 		C05578E901CBC4F2C38036A2 /* Pods_PKCSlice_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AD77DC8935467DDB0C4D86 /* Pods_PKCSlice_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7A88F720390B92003EEA84 /* temp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temp.png; sourceTree = "<group>"; };
+		0C7A88FB20391354003EEA84 /* CustomSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliceView.swift; sourceTree = "<group>"; };
+		0C7A88FD2039137A003EEA84 /* CustomSliceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSliceView.xib; sourceTree = "<group>"; };
 		128548889600611CFEB92065 /* Pods-PKCSlice_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCSlice_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCSlice_Example/Pods-PKCSlice_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		184100DB497CFC3055CB15A6 /* Pods-PKCSlice_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCSlice_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCSlice_Tests/Pods-PKCSlice_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A04634D7F44245DB9FE7B54 /* Pods_PKCSlice_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCSlice_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,10 +55,6 @@
 		6E4CE1B11EA26EA100D45282 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		6E4CE1B21EA26EA100D45282 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		6E4CE1B61EA2732C00D45282 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		6E4CE1B81EA274EF00D45282 /* StoryboardTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardTypeController.swift; sourceTree = "<group>"; };
-		6E4CE1BA1EA2794500D45282 /* SliceImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceImagesViewController.swift; sourceTree = "<group>"; };
-		6E4CE1BC1EA279A200D45282 /* SliceColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceColorsViewController.swift; sourceTree = "<group>"; };
-		6E4CE1BE1EA279B900D45282 /* SliceViewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceViewsViewController.swift; sourceTree = "<group>"; };
 		A3AD77DC8935467DDB0C4D86 /* Pods_PKCSlice_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCSlice_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1232A03114C3EC41A01A004 /* Pods-PKCSlice_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCSlice_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKCSlice_Example/Pods-PKCSlice_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B2DB33FEB0C10D32FEB7F1E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -120,17 +118,16 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				6E4CE1B81EA274EF00D45282 /* StoryboardTypeController.swift */,
-				6E4CE1BA1EA2794500D45282 /* SliceImagesViewController.swift */,
-				6E4CE1BC1EA279A200D45282 /* SliceColorsViewController.swift */,
-				6E4CE1BE1EA279B900D45282 /* SliceViewsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				0C7A88F720390B92003EEA84 /* temp.png */,
 				6E4CE1B01EA26EA100D45282 /* 1.png */,
 				6E4CE1B11EA26EA100D45282 /* 2.png */,
 				6E4CE1B21EA26EA100D45282 /* 3.png */,
 				6E4CE1B61EA2732C00D45282 /* 4.png */,
+				0C7A88FB20391354003EEA84 /* CustomSliceView.swift */,
+				0C7A88FD2039137A003EEA84 /* CustomSliceView.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for PKCSlice";
@@ -234,16 +231,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -273,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				0C7A88F820390B92003EEA84 /* temp.png in Resources */,
 				6E4CE1B71EA2732C00D45282 /* 4.png in Resources */,
+				0C7A88FE2039137A003EEA84 /* CustomSliceView.xib in Resources */,
 				6E4CE1B31EA26EA100D45282 /* 1.png in Resources */,
 				6E4CE1B41EA26EA100D45282 /* 2.png in Resources */,
 				6E4CE1B51EA26EA100D45282 /* 3.png in Resources */,
@@ -390,11 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				6E4CE1B91EA274EF00D45282 /* StoryboardTypeController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				6E4CE1BD1EA279A200D45282 /* SliceColorsViewController.swift in Sources */,
-				6E4CE1BF1EA279B900D45282 /* SliceViewsViewController.swift in Sources */,
-				6E4CE1BB1EA2794600D45282 /* SliceImagesViewController.swift in Sources */,
+				0C7A88FC20391354003EEA84 /* CustomSliceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,14 +440,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -480,6 +482,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -491,14 +494,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -519,6 +528,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -527,13 +537,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 128548889600611CFEB92065 /* Pods-PKCSlice_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PKCSlice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -541,13 +553,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1232A03114C3EC41A01A004 /* Pods-PKCSlice_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PKCSlice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -567,7 +581,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -583,7 +598,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

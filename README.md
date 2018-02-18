@@ -4,86 +4,243 @@
 [![Version](https://img.shields.io/cocoapods/v/PKCSlice.svg?style=flat)](http://cocoapods.org/pods/PKCSlice)
 [![License](https://img.shields.io/cocoapods/l/PKCSlice.svg?style=flat)](http://cocoapods.org/pods/PKCSlice)
 [![Platform](https://img.shields.io/cocoapods/p/PKCSlice.svg?style=flat)](http://cocoapods.org/pods/PKCSlice)
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
-## Example
+## Introduce
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-#### use storyboard
-
-![image](./1_1.png)
-
-![image](./2.png)
-
-![image](./s_1.png)
-
-![image](./s_2.png)
-
-![image](./s_3.png)
-
-~~~~
-
-@IBOutlet weak var sliceView: PKCSlice!
-
-self.sliceView.delegate = self
-//self.sliceView.autoSlice(false)
+The view can be slanted and added dynamically.
+You may or may not fill the top and bottom views.
 
 
-extension ViewController: PKCSliceDelegate{
-    func pkcSliceTouch(_ index: Int) {
-        
-    }
-}
 
-~~~~
-
-<br><br><br><br><br><br>
-
-#### use code
-
-![image](./3.png)
-
-
-~~~~
-
-var images = [UIImage]()
-images.append(UIImage(named: "4.png")!)
-images.append(UIImage(named: "3.png")!)
-images.append(UIImage(named: "2.png")!)
-images.append(UIImage(named: "1.png")!)
-let sliceView = PKCSlice(self.superView, sliceImages: images)
-
-~~~~
-
-
-<br><br><br><br><br><br>
-
-#### touch Delegate
-
-![image](./4.png)
-
-![image](./5.png)
-
-
-~~~~~
-
-public protocol PKCSliceDelegate {
-    func pkcSliceTouch(_ index: Int)
-}
-
-~~~~~
-
+![demo](./img/slice1.gif)
+![demo2](./img/slice2.gif)
 
 ## Requirements
 
+`PKCSlice` written in Swift 4. Compatible with iOS 8.0+
+
 ## Installation
 
-PKCSlice is available through [CocoaPods](http://cocoapods.org). To install
+### Cocoapods
+
+Tags is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "PKCSlice"
+pod 'PKCSlice'
 ```
+
+## Usage
+
+
+
+### Xib or Storyboard file
+
+setting
+
+![image](./img/example1.png)
+
+![image](./img/example2.png)
+
+view
+
+![image](./img/example3.png) 
+
+done!
+
+<br><br><br>
+
+### Code editor
+
+```swift
+import PKCSlice
+```
+
+```swift
+let sliceView = PKCSlice()
+self.view.addSubview(sliceView)
+```
+AutoLayout Example
+
+```swift
+sliceView.translatesAutoresizingMaskIntoConstraints = false
+self.view.addConstraint(NSLayoutConstraint(
+  item: self.view,
+  attribute: .leading,
+  relatedBy: .equal,
+  toItem: sliceView,
+  attribute: .leading,
+  multiplier: 1,
+  constant: 0)
+)
+self.view.addConstraint(NSLayoutConstraint(
+  item: self.view,
+  attribute: .trailing,
+  relatedBy: .equal,
+  toItem: sliceView,
+  attribute: .trailing,
+  multiplier: 1,
+  constant: 0)
+)
+self.view.addConstraint(NSLayoutConstraint(
+  item: self.view,
+  attribute: .top,
+  relatedBy: .equal,
+  toItem: sliceView,
+  attribute: .top,
+  multiplier: 1,
+  constant: 0)
+)
+self.view.addConstraint(NSLayoutConstraint(
+  item: self.view,
+  attribute: .bottom,
+  relatedBy: .equal,
+  toItem: sliceView,
+  attribute: .bottom,
+  multiplier: 1,
+  constant: 0)
+)
+```
+
+done!
+
+<br><br><br>
+
+
+
+### Property
+
+inclination
+
+```swift
+sliceView.inclination = 100
+```
+
+sliceView
+
+```swift
+// Returned as an array of PKCSliceView
+sliceView.sliceViewArray//get-only
+
+// Make Array in colors
+sliceView.hexColors = "e2e2e2,000000"
+
+// SliceView Fill top
+sliceView.isTopFill = true
+
+// SliceView Fill bottom
+sliceView.isBottomFill = true
+
+// topSliceView
+sliceView.topSliceView = PKCSliceView()
+
+// bottomSliceView
+sliceView.bottomSliceView = PKCSliceView()
+
+// Make Simply topSliceView
+sliceView.topHexColor = "e2e2e2"
+
+// Make Simply bottomSliceView
+sliceView.bottomHexColor = "e2e2e2"
+```
+
+
+
+
+
+<br><br>
+
+### Method
+
+append
+
+```swift
+sliceView.append(PKCSliceView())
+sliceView.append(contentsOf: [PKCSliceView(), PKCSliceView()])
+```
+
+remove
+
+```swift
+sliceView.removeAll()
+```
+
+redraw
+
+```swift
+// ReDraw
+sliceView.redraw()
+```
+
+<br><br>
+
+### Delegate
+
+```swift
+class ViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let sliceView = PKCSlice()
+        sliceView.delegate = self
+    }
+}
+
+extension ViewController: SliceViewDelegate{
+
+    // sliceView Touch
+    func sliceTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView?, index: Int) {
+    
+    }
+    
+    // sliceTopView Touch
+    func sliceTopTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView) {
+    
+    }
+    
+    // sliceBottomView Touch
+    func sliceBottomTouchAction(_ slice: PKCSlice, sliceView: PKCSliceView) {
+    
+    }
+}
+
+```
+
+<br><br>
+
+### Customize
+
+PKCSliceView Customize
+
+MAKE CustomSliceView.xib &
+
+```swift
+import UIKit
+import PKCSlice
+
+class CustomSliceView: PKCSliceView {
+    @IBOutlet private weak var imageView1: UIImageView!
+    @IBOutlet private weak var imageView2: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.imageView1.contentMode = .scaleAspectFill
+        self.imageView2.contentMode = .scaleAspectFill
+        self.imageView1.clipsToBounds = true
+        self.imageView2.clipsToBounds = true
+        self.imageView1.image = UIImage(named: "1.png")
+        self.imageView2.image = UIImage(named: "2.png")
+    }
+}
+```
+
+```swift
+guard let sliceView = Bundle.main.loadNibNamed("CustomSliceView", owner: self, options: nil)?.first as? CustomSliceView else{ return }
+self.sliceView.append(sliceView)
+
+```
+
 
 ## Author
 
@@ -91,4 +248,4 @@ pikachu987, pikachu77769@gmail.com
 
 ## License
 
-PKCSlice is available under the MIT license. See the LICENSE file for more info.
+Tags is available under the MIT license. See the LICENSE file for more info.

@@ -1,129 +1,118 @@
+//Copyright (c) 2017 pikachu987 <pikachu77769@gmail.com>
 //
-//  PKCSliceView.swift
-//  Pods
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
 //
-//  Created by guanho on 2017. 4. 16..
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
 //
-//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
 
 import UIKit
 
-protocol PKCSliceViewDelegate {
-    func pkcSliceViewGesture(_ index: Int, isCurrentView: Bool)
+protocol SliceViewDelegate: class {
+    func sliceViewGesture(_ gesture: UITapGestureRecognizer)
 }
 
 open class PKCSliceView: UIView {
     
-    //MARK: property
-    var index: CGFloat = 0
-    var count: CGFloat = 0
-    var inclination: CGFloat = 0
-    var inclinationTop: CGFloat = 0
-    var inclinationBottom: CGFloat = 0
+    // MARK: var
     
-    var delegate: PKCSliceViewDelegate?
+    weak var delegate: SliceViewDelegate?
+    
+    private var tapGestureRecognizer: UITapGestureRecognizer?
     
     
-    //MARK: init
+    // MARK: func
     
-    //inclination
-    init(_ index: Int, count: Int, inclination: CGFloat) {
-        super.init(frame: CGRect.zero)
-        self.setData(index, count: count)
-        self.inclination = inclination
+    /// remove
+    func remove(){
+        self.removeGesture()
+        self.removeFromSuperview()
     }
     
-    
-    //inclinationTop, inclinationBottom
-    init(_ index: Int, count: Int, inclinationTop: CGFloat, inclinationBottom: CGFloat) {
-        super.init(frame: CGRect.zero)
-        self.initData(index, count: count, inclinationTop: inclinationTop, inclinationBottom: inclinationBottom)
+    /// removeGesture
+    private func removeGesture(){
+        if let gesture = self.tapGestureRecognizer{
+            self.removeGestureRecognizer(gesture)
+        }
+        self.tapGestureRecognizer = nil
     }
     
-    //스토리보드에서 만들었을 경우 PKCSliceView가 해당 메서드 호출
-    func initData(_ index: Int, count: Int, inclinationTop: CGFloat, inclinationBottom: CGFloat){
-        self.setData(index, count: count)
-        self.inclinationTop = inclinationTop
-        self.inclinationBottom = inclinationBottom
-    }
-    
-    
-    //Add Gesture
-    func setData(_ index: Int, count: Int){
-        self.count = CGFloat(count)
-        self.index = CGFloat(index)
+    /// addGesture
+    private func addGesture(){
         self.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(self.buttonTouch(_:))
-        )
+        self.removeGesture()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.action(_:)))
+        self.tapGestureRecognizer = tapGesture
         self.addGestureRecognizer(tapGesture)
     }
     
-    
-    //영역 자르기
-    func setSliceFrame(y: CGFloat, width: CGFloat, height: CGFloat){
-        self.setRect(y: y, width: width, height: height)
-        self.setBezierPath(width: width, height: height)
-    }
-    
-    
-    //frame
-    func setRect(y: CGFloat, width: CGFloat, height: CGFloat){
-        self.frame = CGRect(
-            x: 0,
-            y: y - CGFloat(abs(self.inclination)),
-            width: width,
-            height: height + CGFloat(abs(self.inclination))*2
-        )
-    }
-    
-    
-    //mask
-    fileprivate func setBezierPath(width: CGFloat, height: CGFloat){
-        let layer = CAShapeLayer()
+    /// slice
+    func slice(index: Int,
+               count: CGFloat,
+               inclination: CGFloat,
+               isTopFill: Bool,
+               isBottomFill: Bool,
+               size: CGSize){
+        self.clipsToBounds = true
+        self.addGesture()
+        
         let bezierPath = PKCBezierPath(
-            self.index,
-            count: self.count,
-            inclination: self.inclination,
-            width: width,
-            height: height
+            index: index,
+            count: count,
+            inclination: inclination,
+            isTopFill: isTopFill,
+            isBottomFill: isBottomFill,
+            size: size
         )
-        layer.path = bezierPath.cgPath
-        self.layer.mask = layer
-    }
-    
-    
-    //mask 스토리보드로 만들었을때 사용
-    func setBezierPathDiff(width: CGFloat, height: CGFloat){
-        let layer = CAShapeLayer()
-        let bezierPath = PKCBezierPath(
-            self.index,
-            count: self.count,
-            inclinationTop: self.inclinationTop,
-            inclinationBottom: self.inclinationBottom,
-            width: width,
-            height: height
-        )
-        layer.path = bezierPath.cgPath
-        self.layer.mask = layer
+        let sliceLayer = CAShapeLayer()
+        sliceLayer.path = bezierPath.cgPath
+        self.layer.mask = sliceLayer
     }
     
     
     
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    /// slice Top
+    func sliceTop(count: CGFloat, inclination: CGFloat, size: CGSize){
+        self.clipsToBounds = true
+        self.addGesture()
+        
+        let bezierPath = PKCBezierPath(topCount: count, inclination: inclination, size: size)
+        let sliceLayer = CAShapeLayer()
+        sliceLayer.path = bezierPath.cgPath
+        self.layer.mask = sliceLayer
     }
     
+    /// slice Bottom
+    func sliceBottom(count: CGFloat, inclination: CGFloat, size: CGSize){
+        self.clipsToBounds = true
+        self.addGesture()
+        
+        let bezierPath = PKCBezierPath(bottomCount: count, inclination: inclination, size: size)
+        let sliceLayer = CAShapeLayer()
+        sliceLayer.path = bezierPath.cgPath
+        self.layer.mask = sliceLayer
+    }
     
+    /// action
+    @objc private func action(_ sender: UITapGestureRecognizer){
+        self.delegate?.sliceViewGesture(sender)
+    }
     
-    //터치
-    @objc private func buttonTouch(_ sender: UITapGestureRecognizer){
-        let touchLocation: CGPoint = sender.location(in: sender.view)
-        guard let isCurrentView = (self.layer.mask as? CAShapeLayer)?.path?.contains(touchLocation) else{
-            return
-        }
-        self.delegate?.pkcSliceViewGesture(Int(self.index), isCurrentView: isCurrentView)
+    /// isTouch Point
+    func isTouch(_ point: CGPoint) -> Bool{
+        guard let isTouch = (self.layer.mask as? CAShapeLayer)?.path?.contains(point) else{ return false }
+        return isTouch
     }
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PKCSlice'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'PKCSlice Slice View'
   s.description      = 'Slice View. Input image, color, view'
   s.homepage         = 'https://github.com/pikachu987/PKCSlice'
@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   s.author           = { 'pikachu987' => 'pikachu77769@gmail.com' }
   s.source           = { :git => 'https://github.com/pikachu987/PKCSlice.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
+  s.swift_version = '4.0'
   s.source_files = 'PKCSlice/Classes/**/*'
 end
